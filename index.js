@@ -120,11 +120,11 @@ exports.verify = function (params, callback) {
                 if (data.toString() === 'true') {
                     callback(null, true);
                 } else {
-                    callback('error:验证失败');
+                    callback(null, false);
                 }
             }
         });
     } else {
-        callback('error:sign验证不通过');
+        callback(null, false);
     }
 };
